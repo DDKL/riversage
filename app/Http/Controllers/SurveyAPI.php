@@ -7,19 +7,20 @@ use Illuminate\Support\Facades\DB;
 
 class SurveyAPI extends Controller
 {
-    public function getSurveys($cat)
+    public function getSurveys()
     {
         //localhost:8000/api/getsurveys/Well-Matrix
-        if (DB::table('surveys')->where('category',$cat)->exists())
-        {
-            $r = DB::table('surveys')->where('category',$cat)->get();
+        //if (DB::table('surveys')->where('category',$cat)->exists())
+        //{
+            //$r = DB::table('surveys')->where('category',$cat)->get();
+            $r = DB::table('surveys')->get();
 
             return response()->json($r);
-        }
-        else
-        {
-            return response()->json(["message"=>"Category not found",404]);
-        }
+        //}
+        //else
+        //{
+        //    return response()->json(["message"=>"Category not found",404]);
+        //}
     }
 
     public function getSurvey($sid)

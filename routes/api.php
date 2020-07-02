@@ -18,5 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('getsurveys/{cat}','SurveyAPI@getSurveys');
-Route::get('getsurvey/{sid}','SurveyAPI@getSurvey');
+Route::get('survey','SurveyAPI@getSurveys');
+//Route::get('survey/{cat}','SurveyAPI@getSurvey');
+Route::get('survey/{sid}','SurveyAPI@getSurvey');
