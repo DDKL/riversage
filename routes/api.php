@@ -21,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('survey','SurveyAPI@getSurveys');
 //Route::get('survey/{cat}','SurveyAPI@getSurvey');
 Route::get('survey/{sid}','SurveyAPI@getSurvey');
+Route::post('survey/{sid}','SurveyAPI@postSurvey');

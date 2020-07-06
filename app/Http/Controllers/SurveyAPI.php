@@ -7,6 +7,51 @@ use Illuminate\Support\Facades\DB;
 
 class SurveyAPI extends Controller
 {
+    private function createResponse($users_id = 0, $surveys_id)
+    {
+        $rid = DB::table('responses')->insertGetId([
+            'users_id' => $users_id, 'surveys_id' => $surveys_id
+        ]);
+
+        return $rid;
+    }
+
+    private function createUser($uid = 0, $req)
+    {
+        $fname = $req["firstname"];
+        $lname = $req["lastname"];
+        $bday = $req["birthday"];
+        $email = $req["email"];
+        $sex = $req["sex"];
+
+        $users_id = DB::table('users')->insertGetId(
+            ['first_name' => $fname, 'last_name' => $lname, 'birthday' => $bday, 'email' => $email, 'sex' => $sex, 'uid' => $uid]
+        );
+
+        return $users_id;
+
+    }
+
+    public function postSurvey(Request $req, $sid)
+    {
+        $surveys_id = $req->input('surveys_id');
+        $uid = $req->input('uid');
+        $info = $req->input('info');
+        $users_id = $req->input('users_id') != "" ? $req->input('users_id') : SurveyAPI::createUser($uid, $info[0]);
+        $responses = $req->input('responses');
+
+        $rid = SurveyAPI::createResponse($users_id, $surveys_id);
+
+        for ($i = 0; $i < 12; $i++)
+        {
+            DB::table('responses_wellmatrix')->insert(
+                ['response' => $responses[$i]['response'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
+            );
+        }
+
+        return response()->json(["message" => "successfully posted."], 200);
+    }
+
     public function getSurveys()
     {
         //localhost:8000/api/getsurveys/Well-Matrix
