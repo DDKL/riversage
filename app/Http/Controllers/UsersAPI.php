@@ -14,16 +14,9 @@ class UsersAPI extends Controller
         return response()->json($r, 200);
     }
 
-    public function getUser($users_id)
+    public function getUser($uid)
     {
-        $r = DB::table('users')->where('id', $users_id)->get();
-
-        return response()->json($r, 200);
-    }
-
-    public function getUsersId($uid)
-    {
-        $r = DB::table('users')->where('uid', $uid)->get('id');
+        $r = DB::table('users')->where('uid', $uid)->get();
 
         return response()->json($r, 200);
     }
@@ -52,17 +45,17 @@ class UsersAPI extends Controller
         }
     }
 
-    public function editUser(Request $req, $users_id)
+    public function editUser(Request $req, $uid)
     {
-        if (DB::table('users')->where('id', $users_id)->exists())
+        if (DB::table('users')->where('uid', $uid)->exists())
         {
-            $user = DB::table('users')->where('id', $users_id)->find($users_id);
+            $user = DB::table('users')->where('uid', $uid)->first();
             $first_name = is_null($req["firstname"]) ? $user->first_name : $req["firstname"];
             $last_name = is_null($req["lastname"]) ? $user->last_name : $req["lastname"];
             $email = is_null($req["email"]) ? $user->email : $req["email"];
             $birthday = is_null($req["birthday"]) ? $user->birthday : $req["birthday"];
 
-            DB::table('users')->where('id', $users_id)->update(["first_name"=>$first_name, "last_name"=>$last_name, "email"=>$email, "birthday"=>$birthday]);
+            DB::table('users')->where('uid', $uid)->update(["first_name"=>$first_name, "last_name"=>$last_name, "email"=>$email, "birthday"=>$birthday]);
         }
         else
         {

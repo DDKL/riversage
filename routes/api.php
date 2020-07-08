@@ -23,11 +23,11 @@ Route::get('survey','SurveyAPI@getSurveys');
 Route::get('survey/{sid}','SurveyAPI@getSurvey');
 Route::post('survey/{sid}','SurveyAPI@postSurvey');
 
-Route::get('result/{users_id}','ResultAPI@getAllResults');
-Route::get('result/{users_id}/{rid}','ResultAPI@getResult');
+Route::get('result/{uid}','ResultAPI@getAllResults');
+Route::get('result/{uid}/{rid}','ResultAPI@getResult');
 
 Route::get('users','UsersAPI@getUsers');
-Route::get('users/{users_id}','UsersAPI@getUser');
+Route::get('users/{uid}','UsersAPI@getUser');
 Route::get('usersid/{uid}','UsersAPI@getUsersId');
 Route::post('users','UsersAPI@addUser');
-Route::put('users/{users_id}','UsersAPI@editUser');
+Route::put('users/{uid}','UsersAPI@editUser');

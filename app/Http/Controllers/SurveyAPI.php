@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class SurveyAPI extends Controller
 {
-    private function createResponse($users_id = 0, $surveys_id)
+    private function createResponse($uid = 0, $surveys_id)
     {
         $rid = DB::table('responses')->insertGetId([
-            'users_id' => $users_id, 'surveys_id' => $surveys_id
+            'uid' => $uid, 'surveys_id' => $surveys_id
         ]);
 
         return $rid;
@@ -76,15 +76,20 @@ class SurveyAPI extends Controller
         $surveys_id = $req->input('surveys_id');
         $uid = $req->input('uid');
         $info = $req->input('info');
-        $users_id = $req->input('users_id') != "" ? $req->input('users_id') : SurveyAPI::createUser($uid, $info[0]);
+        //$users_id = $req->input('users_id') != "" ? $req->input('users_id') : SurveyAPI::createUser($uid, $info[0]);
+
+        if (!DB::table('users')->where('uid', $req->input('uid'))->exists())
+        {
+            $users_id = SurveyAPI::createUser($uid, $info[0]);
+        }
         $responses = $req->input('responses');
 
-        $rid = SurveyAPI::createResponse($users_id, $surveys_id);
+        $rid = SurveyAPI::createResponse($uid, $surveys_id);
 
         for ($i = 0; $i < 12; $i++)
         {
             DB::table('responses_wellmatrix')->insert(
-                ['response' => $responses[$i]['value'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
+                ['value' => $responses[$i]['value'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
             );
         }
 
@@ -93,7 +98,7 @@ class SurveyAPI extends Controller
 
         
 
-        return response()->json([["message" => "response successfully stored for users_id " . $users_id], $recs], 200);
+        return response()->json([["message" => "response successfully stored"], $recs], 200);
     }
 
     public function getSurveys()
