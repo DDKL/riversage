@@ -22,3 +22,6 @@ Route::get('survey','SurveyAPI@getSurveys');
 //Route::get('survey/{cat}','SurveyAPI@getSurvey');
 Route::get('survey/{sid}','SurveyAPI@getSurvey');
 Route::post('survey/{sid}','SurveyAPI@postSurvey');
+
+Route::get('result/{users_id}','ResultAPI@getAllResults');
+Route::get('result/{users_id}/{rid}','ResultAPI@getResult');
