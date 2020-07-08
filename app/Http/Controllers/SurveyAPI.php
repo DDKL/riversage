@@ -32,8 +32,21 @@ class SurveyAPI extends Controller
 
     }
 
+    private function recommendationAlgorithm($sid, $responses)
+    {
+
+    }
+
+
+    /*
+        1. save responses
+        2. generate recommendations
+        3. save recommended products
+        4. return recommended products
+    */
     public function postSurvey(Request $req, $sid)
     {
+        //Save responses
         $surveys_id = $req->input('surveys_id');
         $uid = $req->input('uid');
         $info = $req->input('info');
@@ -45,9 +58,12 @@ class SurveyAPI extends Controller
         for ($i = 0; $i < 12; $i++)
         {
             DB::table('responses_wellmatrix')->insert(
-                ['response' => $responses[$i]['response'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
+                ['response' => $responses[$i]['value'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
             );
         }
+
+        //Generate recommendation
+        $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
         return response()->json(["message" => "successfully posted."], 200);
     }
