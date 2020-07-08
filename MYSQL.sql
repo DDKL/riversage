@@ -39,7 +39,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'adult',NULL,'r1','2020-06-01 17:00:59','2020-06-01 17:00:59'),(2,'men',NULL,'r1','2020-06-01 17:00:59','2020-06-01 17:00:59'),(3,'young_women',NULL,'r1','2020-06-01 17:00:59','2020-06-01 17:00:59'),(4,'menopausal_women',NULL,'r1','2020-06-01 17:00:59','2020-06-01 17:00:59'),(5,'pregnant_women',NULL,'r1','2020-06-01 17:00:59','2020-06-01 17:00:59'),(6,'children',NULL,'r1','2020-04-28 18:05:59','2020-05-05 21:16:00'),(7,'adult_vegan',NULL,'r1_extra','2020-05-21 20:27:25','2020-06-01 17:03:26'),(8,'cardiometabolic_circulation','0','r2','2020-04-29 22:48:21','2020-07-02 05:11:26'),(9,'immune',NULL,'r2','2020-04-29 22:48:21','2020-05-21 16:44:11'),(10,'gastrointestinal',NULL,'r2','2020-04-29 22:48:21','2020-05-21 16:44:38'),(11,'hormone_stress','0','r2','2020-04-29 22:48:21','2020-07-02 05:10:49'),(12,'energy',NULL,'r2','2020-04-29 22:48:21','2020-04-29 22:48:21'),(13,'musculoskeletal',NULL,'r2','2020-04-29 22:48:21','2020-04-29 22:48:21'),(16,'detox',NULL,'r2','2020-04-29 22:49:46','2020-05-21 16:45:29'),(17,'cognition',NULL,'r2','2020-04-29 22:49:46','2020-05-21 16:45:16'),(18,'organ_eye','0','r2','2020-05-21 20:25:01','2020-07-02 05:10:00'),(19,'organ_prostate','0','r2','2020-05-21 20:25:01','2020-07-02 05:10:00'),(20,'organ_liver','0','r2','2020-05-21 20:25:01','2020-07-02 05:10:00'),(21,'organ_kidney','0','r2','2020-05-21 20:25:01','2020-07-02 05:10:00'),(22,'organ','0','r2','2020-05-21 20:25:13','2020-07-02 05:10:00'),(23,'menopausal_women_men_40',NULL,'r1_extra','2020-06-01 17:02:14','2020-06-01 17:02:14'),(24,'adult',NULL,'r1_extra','2020-06-01 17:03:11','2020-06-01 17:03:11'),(25,'kids',NULL,'r1_extra','2020-06-01 17:03:11','2020-06-01 17:03:11'),(26,'cardiometabolic',NULL,'r2','2020-06-01 17:05:19','2020-06-01 17:05:19'),(27,'immune_all','0','r2','2020-06-01 17:05:19','2020-07-02 05:11:26'),(28,'immune_adult','0','r2','2020-06-01 17:05:19','2020-07-02 05:10:49'),(29,'hormone_menopausal','0','r2','2020-06-01 17:05:19','2020-07-02 05:10:49'),(30,'stress',NULL,'r2','2020-06-01 17:05:19','2020-06-01 17:05:19'),(31,'circulation',NULL,'r2','2020-06-01 17:05:19','2020-06-01 17:05:19'),(32,'meal_replacement',NULL,'r3','2020-06-01 17:05:37','2020-06-01 17:05:37'),(33,'exercise',NULL,'r3','2020-06-01 17:05:37','2020-06-01 17:05:37'),(34,'skin',NULL,'beauty','2020-06-01 18:40:46','2020-06-01 18:40:46'),(35,'hair',NULL,'beauty','2020-06-01 18:40:46','2020-06-01 18:40:46'),(36,'mature-adult',NULL,'r1','2020-06-16 17:17:27','2020-06-16 17:17:27'),(37,'hormones',NULL,'r2','2020-06-16 17:24:29','2020-06-16 17:24:29');
+INSERT INTO `categories` VALUES (1,'adult','inactive','r1','2020-06-01 17:00:59','2020-07-08 20:55:53'),(2,'men','inactive','r1','2020-06-01 17:00:59','2020-07-08 20:55:53'),(3,'young_women','inactive','r1','2020-06-01 17:00:59','2020-07-08 20:55:53'),(4,'menopausal_women','inactive','r1','2020-06-01 17:00:59','2020-07-08 20:55:53'),(5,'pregnant_women','inactive','r1','2020-06-01 17:00:59','2020-07-08 20:55:53'),(6,'children','inactive','r1','2020-04-28 18:05:59','2020-07-08 20:55:53'),(7,'adult_vegan','inactive','r1_extra','2020-05-21 20:27:25','2020-07-08 20:55:24'),(8,'cardiometabolic_circulation','inactive','r2','2020-07-08 20:51:48','2020-07-08 20:52:34'),(9,'immune','inactive','r2','2020-04-29 22:48:21','2020-07-08 20:55:53'),(10,'gastrointestinal','inactive','r2','2020-04-29 22:48:21','2020-07-08 20:55:53'),(11,'hormone_stress','inactive','r2','2020-07-08 20:51:48','2020-07-08 20:52:34'),(12,'energy','inactive','r2','2020-04-29 22:48:21','2020-07-08 20:55:53'),(13,'musculoskeletal','inactive','r2','2020-04-29 22:48:21','2020-07-08 20:55:53'),(16,'detox','inactive','r2','2020-04-29 22:49:46','2020-07-08 20:55:53'),(17,'cognition','inactive','r2','2020-04-29 22:49:46','2020-07-08 20:55:53'),(23,'menopausal_women_men_40','inactive','r1_extra','2020-06-01 17:02:14','2020-07-08 20:55:24'),(24,'adult','inactive','r1_extra','2020-06-01 17:03:11','2020-07-08 20:55:24'),(25,'kids','inactive','r1_extra','2020-06-01 17:03:11','2020-07-08 20:55:24'),(26,'cardiometabolic','inactive','r2','2020-06-01 17:05:19','2020-07-08 20:55:53'),(27,'immune_all','inactive','r2','2020-07-08 20:51:48','2020-07-08 20:52:34'),(28,'immune_adult','inactive','r2','2020-07-08 20:51:48','2020-07-08 20:52:34'),(29,'hormone_menopausal','inactive','r2','2020-07-08 20:51:48','2020-07-08 20:52:34'),(30,'stress','inactive','r2','2020-06-01 17:05:19','2020-07-08 20:55:53'),(31,'circulation','inactive','r2','2020-06-01 17:05:19','2020-07-08 20:55:53'),(32,'meal_replacement','inactive','r3','2020-06-01 17:05:37','2020-07-08 20:55:36'),(33,'exercise','inactive','r3','2020-06-01 17:05:37','2020-07-08 20:55:36'),(34,'skin','inactive','beauty','2020-06-01 18:40:46','2020-07-08 20:55:24'),(35,'hair','inactive','beauty','2020-06-01 18:40:46','2020-07-08 20:55:24'),(36,'mature-adult','inactive','r1','2020-06-16 17:17:27','2020-07-08 20:55:53'),(37,'hormones','inactive','r2','2020-06-16 17:24:29','2020-07-08 20:55:53');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,33 +122,6 @@ LOCK TABLES `diseases` WRITE;
 /*!40000 ALTER TABLE `diseases` DISABLE KEYS */;
 INSERT INTO `diseases` VALUES (1,'arthritis',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(2,'hypertension',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(3,'asthma',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(4,'blindness',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(5,'cancer',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(6,'chronic bronchitis',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(7,'coronary heart disease',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(8,'dementia',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(9,'diabetes',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(10,'epilepsy',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(11,'motor neurone disease',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(12,'multiple sclerosis',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(13,'osteoporosis',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(14,'paget\'s disease of the bone',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(15,'parkinson\'s disease',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(16,'stroke',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(17,'chronic kidney disease',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(18,'deep vein thrombosis',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(19,'shingles',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26'),(20,'cholesterol',NULL,'2020-05-13 17:18:26','2020-05-13 17:18:26');
 /*!40000 ALTER TABLE `diseases` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `failed_jobs`
---
-
-DROP TABLE IF EXISTS `failed_jobs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `failed_jobs`
---
-
-LOCK TABLES `failed_jobs` WRITE;
-/*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -291,55 +264,6 @@ LOCK TABLES `medications` WRITE;
 /*!40000 ALTER TABLE `medications` DISABLE KEYS */;
 INSERT INTO `medications` VALUES (1,'Levothyroxine',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(2,'Lisinopril',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(3,'Atorvastatin',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(4,'Metformin',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(5,'Amlodipine',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(6,'Metoprolol',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(7,'Omeprazole',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(8,'Simvastatin',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(9,'Losartan',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(10,'Albuterol',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(11,'Gabapentin (neurontin)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(12,'Hydrochlorothiazide (Esidrix, Hydrodiuril, Microzide, Oretic, Zide)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(13,'Hydrocodone/acetaminophen (Lortab, Norco, Vicodin, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(14,'Sertraline (Zoloft)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(15,'Furosemide (Lasix)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(16,'Fluticasone (Flonase, Flovent, Cutivate, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(17,'Acetaminophen (Tylenol, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(18,'Amoxicillin (Amoxil, Polymox, Trimox, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(19,'Alprazolam (Xanax)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(20,'Atenolol (Tenormin)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(21,'Citalopram (Celexa)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(22,'Insulin glargine (Lantus, Toujeo)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(23,'Montelukast (Singulair)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(24,'Trazodone (Desyrel, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(25,'Pantoprazole (Protonix)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(26,'Escitalopram (Lexapro)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(27,'Pravastatin (Pravachol)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(28,'Bupropion (Budeprion, Buproban, Wellbutrin, Zyban)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(29,'Fluoxetine (Prozac, Rapiflux, Sarafem, Selfemra)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(30,'Carvedilol (Coreg)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(31,'Prednisone (Deltasone, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(32,'Tamsulosin (Flomax)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(33,'Potassium (K-Dur, Klor-Con, Klotrix, Micro-K, Slow-K, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(34,'Clopidogrel (Plavix)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(35,'Ibuprofen (Advil, Motrix, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(36,'Meloxicam (Mobic)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(37,'Rosuvastatin (Crestor)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(38,'Aspirin',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(39,'Tramadol (Ultram, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(40,'Zolpidem (Ambien, Intermezzo, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(41,'Warfarin (Coumadin)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(42,'Clonazepam (Klonopin)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(43,'Propranolol (Inderal, InnoPran, Pronol)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(44,'Glipizide (Glucotrol)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(45,'Dextroamphetamine/amphetamine salts (Adderall)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(46,'Cyclobenzaprine (Flexeril)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(47,'Methylphenidate (Concerta, Metadate, Ritalin, etc.)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(48,'Duloxetine (Cymbalta)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(49,'Azithromycin (Zithromax)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(50,'Ranitidine (Zantac)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33'),(51,'Chlorthalidone (Hygroton)',NULL,'2020-05-13 17:10:33','2020-05-13 17:10:33');
 /*!40000 ALTER TABLE `medications` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `migrations`
---
-
-DROP TABLE IF EXISTS `migrations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `migrations` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `migrations`
---
-
-LOCK TABLES `migrations` WRITE;
-/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2020_06_23_205900_create_students_table',1),(2,'2014_10_12_100000_create_password_resets_table',2),(3,'2019_08_19_000000_create_failed_jobs_table',2),(4,'2020_06_29_200526_create_patients_table',2),(5,'2020_06_30_001538_wm_surveys',3),(6,'2020_06_30_002953_wm_surveys2',4),(7,'2020_06_30_162650_wm_surveys3',5);
-/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `password_resets`
---
-
-DROP TABLE IF EXISTS `password_resets`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `password_resets`
---
-
-LOCK TABLES `password_resets` WRITE;
-/*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
-/*!40000 ALTER TABLE `password_resets` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -520,12 +444,12 @@ DROP TABLE IF EXISTS `responses`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `responses` (
   `responses_id` int(11) NOT NULL AUTO_INCREMENT,
-  `users_id` int(10) unsigned DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `surveys_id` int(11) DEFAULT NULL,
+  `uid` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`responses_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=669 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=701 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -534,7 +458,7 @@ CREATE TABLE `responses` (
 
 LOCK TABLES `responses` WRITE;
 /*!40000 ALTER TABLE `responses` DISABLE KEYS */;
-INSERT INTO `responses` VALUES (665,629,'2020-07-08 17:14:14','2020-07-08 17:14:14',1),(666,629,'2020-07-08 17:15:01','2020-07-08 17:15:01',1),(667,630,'2020-07-08 17:16:42','2020-07-08 17:16:42',1),(668,630,'2020-07-08 17:17:07','2020-07-08 17:17:07',1);
+INSERT INTO `responses` VALUES (700,'2020-07-08 21:56:03','2020-07-08 21:56:03',1,'blah');
 /*!40000 ALTER TABLE `responses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -657,10 +581,10 @@ CREATE TABLE `responses_wellmatrix` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `responses_id` int(11) DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
-  `response` varchar(256) DEFAULT NULL,
+  `value` varchar(8) DEFAULT NULL,
   `questions_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=233 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=617 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -669,7 +593,7 @@ CREATE TABLE `responses_wellmatrix` (
 
 LOCK TABLES `responses_wellmatrix` WRITE;
 /*!40000 ALTER TABLE `responses_wellmatrix` DISABLE KEYS */;
-INSERT INTO `responses_wellmatrix` VALUES (185,665,'2020-07-08 17:14:14','yes',1),(186,665,'2020-07-08 17:14:14','yes',2),(187,665,'2020-07-08 17:14:14','no',3),(188,665,'2020-07-08 17:14:14','yes',4),(189,665,'2020-07-08 17:14:14','no',5),(190,665,'2020-07-08 17:14:14','yes',6),(191,665,'2020-07-08 17:14:14','yes',7),(192,665,'2020-07-08 17:14:14','yes',8),(193,665,'2020-07-08 17:14:14','no',9),(194,665,'2020-07-08 17:14:14','yes',10),(195,665,'2020-07-08 17:14:14','no',11),(196,665,'2020-07-08 17:14:14','2',12),(197,666,'2020-07-08 17:15:01','no',1),(198,666,'2020-07-08 17:15:01','yes',2),(199,666,'2020-07-08 17:15:01','no',3),(200,666,'2020-07-08 17:15:01','yes',4),(201,666,'2020-07-08 17:15:01','yes',5),(202,666,'2020-07-08 17:15:01','yes',6),(203,666,'2020-07-08 17:15:01','yes',7),(204,666,'2020-07-08 17:15:01','no',8),(205,666,'2020-07-08 17:15:01','no',9),(206,666,'2020-07-08 17:15:01','yes',10),(207,666,'2020-07-08 17:15:01','no',11),(208,666,'2020-07-08 17:15:01','2',12),(209,667,'2020-07-08 17:16:42','no',1),(210,667,'2020-07-08 17:16:42','yes',2),(211,667,'2020-07-08 17:16:42','yes',3),(212,667,'2020-07-08 17:16:42','yes',4),(213,667,'2020-07-08 17:16:42','yes',5),(214,667,'2020-07-08 17:16:42','yes',6),(215,667,'2020-07-08 17:16:42','no',7),(216,667,'2020-07-08 17:16:42','no',8),(217,667,'2020-07-08 17:16:42','yes',9),(218,667,'2020-07-08 17:16:42','yes',10),(219,667,'2020-07-08 17:16:42','no',11),(220,667,'2020-07-08 17:16:42','2',12),(221,668,'2020-07-08 17:17:07','yes',1),(222,668,'2020-07-08 17:17:07','yes',2),(223,668,'2020-07-08 17:17:07','yes',3),(224,668,'2020-07-08 17:17:07','no',4),(225,668,'2020-07-08 17:17:07','yes',5),(226,668,'2020-07-08 17:17:07','yes',6),(227,668,'2020-07-08 17:17:07','no',7),(228,668,'2020-07-08 17:17:07','no',8),(229,668,'2020-07-08 17:17:07','yes',9),(230,668,'2020-07-08 17:17:07','yes',10),(231,668,'2020-07-08 17:17:07','no',11),(232,668,'2020-07-08 17:17:07','2',12);
+INSERT INTO `responses_wellmatrix` VALUES (605,700,'2020-07-08 21:56:03','yes',1),(606,700,'2020-07-08 21:56:03','yes',2),(607,700,'2020-07-08 21:56:03','yes',3),(608,700,'2020-07-08 21:56:03','yes',4),(609,700,'2020-07-08 21:56:03','yes',5),(610,700,'2020-07-08 21:56:03','yes',6),(611,700,'2020-07-08 21:56:03','no',7),(612,700,'2020-07-08 21:56:03','no',8),(613,700,'2020-07-08 21:56:03','no',9),(614,700,'2020-07-08 21:56:03','no',10),(615,700,'2020-07-08 21:56:03','yes',11),(616,700,'2020-07-08 21:56:03','2',12);
 /*!40000 ALTER TABLE `responses_wellmatrix` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -772,7 +696,7 @@ CREATE TABLE `users` (
   `uid` varchar(128) DEFAULT NULL,
   `counter` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=637 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=643 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -781,7 +705,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (629,'Duke','Lee','duke.lee@arctrials.com','male','1992-01-13',NULL,NULL,'2020-07-08 17:14:14','2020-07-08 17:14:14','$$$',0),(630,'Qwerty','Asdf','qwerty.asdf@arctrials.com','male','1972-11-30',NULL,NULL,'2020-07-08 17:16:42','2020-07-08 17:16:42','###',0),(636,'Qwerty','Asdf','qwerty.asdf@trials.com','male','1972-11-30',NULL,NULL,'2020-07-08 17:41:28','2020-07-08 18:05:20','abcde',0);
+INSERT INTO `users` VALUES (642,'Qwerty','Asdf','qwerty.asdf@afh.com','male','1992-06-21',NULL,NULL,'2020-07-08 21:56:03','2020-07-08 22:02:43','blah',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -824,4 +748,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-08 11:06:30
+-- Dump completed on 2020-07-08 15:03:49
