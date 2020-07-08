@@ -58,7 +58,7 @@ class SurveyAPI extends Controller
 
         $p = $tmp[$sid];
 
-        $json = ["products" => $p];
+        $json = $p;
 
         return $json;
     }
@@ -98,7 +98,7 @@ class SurveyAPI extends Controller
 
         
 
-        return response()->json([["message" => "response successfully stored"], $recs], 200);
+        return response()->json(["message" => "response successfully stored", "products" => $recs], 200);
     }
 
     public function getSurveys()
