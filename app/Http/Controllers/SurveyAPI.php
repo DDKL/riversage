@@ -48,9 +48,19 @@ class SurveyAPI extends Controller
             }   
         }
 
-        $lvl = round($lvl/4);
+        $lvl = round($lvl/4) + 1;         
+        $tmp = [
+            ["physicians-daily-multivitamin-d3", "paleogreens-unflavored-powder-270g", "omegagenics-epa-dha-1000-lemon-60sg"],
+            ["inflammacore-chocolate-mint-14-servings", "mitocore-protein-blend-strawberry", "osteobase-90c"],
+            ["melatonin-100t", "nuadapt", "adren-all-120c"],
+            ["probiotic-225-15-packets","clear-change-10-day-detox-program-with-ultraclear-renew-berry","metalloclear-180tab"]
+        ];
 
-        return ++$lvl;
+        $p = $tmp[$sid];
+
+        $json = ["products" => $p];
+
+        return $json;
     }
 
 
@@ -83,7 +93,7 @@ class SurveyAPI extends Controller
 
         
 
-        return response()->json(["message" => "response successfully stored for users_id " . $users_id], 200);
+        return response()->json([["message" => "response successfully stored for users_id " . $users_id], $recs], 200);
     }
 
     public function getSurveys()
