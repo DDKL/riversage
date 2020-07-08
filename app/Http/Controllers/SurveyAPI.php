@@ -83,7 +83,7 @@ class SurveyAPI extends Controller
 
         
 
-        return response()->json(["message" => "successfully posted with users_id " . $users_id], 200);
+        return response()->json(["message" => "response successfully stored for users_id " . $users_id], 200);
     }
 
     public function getSurveys()

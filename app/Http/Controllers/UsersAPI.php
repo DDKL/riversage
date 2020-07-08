@@ -21,6 +21,13 @@ class UsersAPI extends Controller
         return response()->json($r, 200);
     }
 
+    public function getUsersId($uid)
+    {
+        $r = DB::table('users')->where('uid', $uid)->get('id');
+
+        return response()->json($r, 200);
+    }
+
     public function addUser(Request $req)
     {
         $uid = $req["uid"];

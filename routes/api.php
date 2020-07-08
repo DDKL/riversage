@@ -28,5 +28,6 @@ Route::get('result/{users_id}/{rid}','ResultAPI@getResult');
 
 Route::get('users','UsersAPI@getUsers');
 Route::get('users/{users_id}','UsersAPI@getUser');
+Route::get('usersid/{uid}','UsersAPI@getUsersId');
 Route::post('users','UsersAPI@addUser');
 Route::put('users/{users_id}','UsersAPI@editUser');
