@@ -34,7 +34,23 @@ class SurveyAPI extends Controller
 
     private function recommendationAlgorithm($sid, $responses)
     {
+        //3 levels
+        $lvl = 0; 
+        for ($i = 0; $i < 11; $i++)
+        {
+            if ($i < 6)
+            {
+                $lvl = $lvl + ($responses[$i]['value'] == "no" ? 1 : 0);
+            }
+            else
+            {
+                $lvl = $lvl + ($responses[$i]['value'] == "yes" ? 1 : 0);
+            }   
+        }
 
+        $lvl = round($lvl/4);
+
+        return ++$lvl;
     }
 
 
@@ -65,7 +81,9 @@ class SurveyAPI extends Controller
         //Generate recommendation
         $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
-        return response()->json(["message" => "successfully posted."], 200);
+        
+
+        return response()->json(["message" => "successfully posted with users_id " . $users_id], 200);
     }
 
     public function getSurveys()
