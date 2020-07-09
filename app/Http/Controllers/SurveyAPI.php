@@ -53,11 +53,11 @@ class SurveyAPI extends Controller
             ["primary" => ["physicians-daily-multivitamin-d3", "paleogreens-unflavored-powder-270g", "omegagenics-epa-dha-1000-lemon-60sg"], 
                 "secondary" => ["primal-plants", "metaglycemx-60tab", "complete-mineral-complex-90c"]],
             ["primary" => ["inflammacore-chocolate-mint-14-servings", "mitocore-protein-blend-strawberry", "osteobase-90c"], 
-                "secondary" => [["perfect-protein-whey-chocolate-30-servings", "muscle-aid", "vitamin-d-synergy-240c"]],
+                "secondary" => ["perfect-protein-whey-chocolate-30-servings", "muscle-aid", "vitamin-d-synergy-240c"]],
             ["primary" => ["melatonin-100t", "nuadapt", "adren-all-120c"], 
-                "secondary" => [["brain-vitale-60c", "neurocalm-60c", "stressarrest-90c"]],
+                "secondary" => ["brain-vitale-60c", "neurocalm-60c", "stressarrest-90c"]],
             ["primary" => ["probiotic-225-15-packets","clear-change-10-day-detox-program-with-ultraclear-renew-berry","metalloclear-180tab"], 
-                "secondary" => [["histaeze-120c", "n-acetyl-cysteine-60c", "vital-reds"]]
+                "secondary" => ["histaeze-120c", "n-acetyl-cysteine-60c", "vital-reds"]]
         ];
 
         $p = $tmp[--$sid];
