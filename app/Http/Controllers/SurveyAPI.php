@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Survey;
+use App\SurveysQuestions;
+use App\Questions;
 
 class SurveyAPI extends Controller
 {
@@ -111,7 +114,8 @@ class SurveyAPI extends Controller
         //if (DB::table('surveys')->where('category',$cat)->exists())
         //{
             //$r = DB::table('surveys')->where('category',$cat)->get();
-            $r = DB::table('surveys')->get();
+            //$r = DB::table('surveys')->get();
+            $r = Survey::get();
 
             return response()->json($r);
         //}
@@ -124,10 +128,9 @@ class SurveyAPI extends Controller
     public function getSurvey($sid)
     {
         //localhost:8000/api/getsurvey/1
-        if (DB::table('surveys_questions')->where('surveys_id', $sid)->exists())
+        if (SurveysQuestions::where('surveys_id', $sid)->exists())
         {
-            $r = DB::table('questions')
-                ->join(
+            $r = Questions::join(
                     'surveys_questions', 
                     function($join) use ($sid)
                     {
