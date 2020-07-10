@@ -60,7 +60,11 @@ class SurveyAPI extends Controller
                             ["handle" => "paleogreens-unflavored-powder-270g", "reason" => "This product is recommended because it provides nutrients found in fruits, vegetables, nuts and seeds.", "ingredients" => ["Greens Proprietary Blend"]], 
                             ["handle" => "omegagenics-epa-dha-1000-lemon-60sg", "reason" => "This product is recommended because it contains fish oil found in fish to benefit heart, brain, and healthy fats.", "ingredients" => ["EPA", "DHA"]]], 
                 "secondary" => ["primal-plants", "metaglycemx-60tab", "complete-mineral-complex-90c"]],
-            ["primary" => ["inflammacore-chocolate-mint-14-servings", "mitocore-protein-blend-strawberry", "osteobase-90c"], 
+            ["primary" => [
+                            ["handle" => "inflammacore-chocolate-mint-14-servings", "reason" => "This product is recommended because it contains ingredients which strengthen the immune system.", "ingredients" => ["Vitamin D", "Turmeric"]], 
+                            ["handle" => "mitocore-protein-blend-strawberry", "reason" => "This product is recomended because it provides multivitamins and minerals alongside protein.", "ingredients" => ["Protein", "Vitamin C", "Vitamin B-12"]], 
+                            ["handle" => "osteobase-90c", "reason" => "This product is recommended because it contains nutrients which maintain strong and healthy bones.", "ingredients" => ["Calcium", "Magnesium", "Vitamin-D"]]
+                        ], 
                 "secondary" => ["perfect-protein-whey-chocolate-30-servings", "muscle-aid", "vitamin-d-synergy-240c"]],
             ["primary" => ["melatonin-100t", "nuadapt", "adren-all-120c"], 
                 "secondary" => ["brain-vitale-60c", "neurocalm-60c", "stressarrest-90c"]],
