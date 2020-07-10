@@ -7,12 +7,15 @@ use Illuminate\Support\Facades\DB;
 use App\Survey;
 use App\SurveysQuestions;
 use App\Questions;
+use App\Responses;
+use App\Users;
+use App\ResponsesWellmatrix;
 
 class SurveyAPI extends Controller
 {
     private function createResponse($uid = 0, $surveys_id)
     {
-        $rid = DB::table('responses')->insertGetId([
+        $rid = Responses::insertGetId([
             'uid' => $uid, 'surveys_id' => $surveys_id
         ]);
 
@@ -27,7 +30,7 @@ class SurveyAPI extends Controller
         $email = $req["email"];
         $sex = $req["sex"];
 
-        $users_id = DB::table('users')->insertGetId(
+        $users_id = Users::insertGetId(
             ['first_name' => $fname, 'last_name' => $lname, 'birthday' => $bday, 'email' => $email, 'sex' => $sex, 'uid' => $uid]
         );
 
@@ -53,7 +56,9 @@ class SurveyAPI extends Controller
 
         $lvl = round($lvl/4) + 1;         
         $tmp = [
-            ["primary" => ["physicians-daily-multivitamin-d3", "paleogreens-unflavored-powder-270g", "omegagenics-epa-dha-1000-lemon-60sg"], 
+            ["primary" => [["handle" => "physicians-daily-multivitamin-d3", "reason" => "This product is recommended because it contains essential vitamins and minerals to support body function.", "ingredients" => ["Vitamin B-6", "Vitamin B-12", "Folate", "Vitamin D3"]], 
+                            ["handle" => "paleogreens-unflavored-powder-270g", "reason" => "This product is recommended because it provides nutrients found in fruits, vegetables, nuts and seeds.", "ingredients" => ["Greens Proprietary Blend"]], 
+                            ["handle" => "omegagenics-epa-dha-1000-lemon-60sg", "reason" => "This product is recommended because it contains fish oil found in fish to benefit heart, brain, and healthy fats.", "ingredients" => ["EPA", "DHA"]]], 
                 "secondary" => ["primal-plants", "metaglycemx-60tab", "complete-mineral-complex-90c"]],
             ["primary" => ["inflammacore-chocolate-mint-14-servings", "mitocore-protein-blend-strawberry", "osteobase-90c"], 
                 "secondary" => ["perfect-protein-whey-chocolate-30-servings", "muscle-aid", "vitamin-d-synergy-240c"]],
@@ -70,6 +75,10 @@ class SurveyAPI extends Controller
         return $json;
     }
 
+    private function storeResults($recs, $rid)
+    {
+        
+    }
 
     /*
         1. save responses
@@ -85,7 +94,7 @@ class SurveyAPI extends Controller
         $info = $req->input('info');
         //$users_id = $req->input('users_id') != "" ? $req->input('users_id') : SurveyAPI::createUser($uid, $info[0]);
 
-        if (!DB::table('users')->where('uid', $req->input('uid'))->exists())
+        if (!Users::where('uid', $req->input('uid'))->exists())
         {
             $users_id = SurveyAPI::createUser($uid, $info[0]);
         }
@@ -95,7 +104,7 @@ class SurveyAPI extends Controller
 
         for ($i = 0; $i < 12; $i++)
         {
-            DB::table('responses_wellmatrix')->insert(
+            ResponsesWellmatrix::insert(
                 ['value' => $responses[$i]['value'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
             );
         }
@@ -103,7 +112,8 @@ class SurveyAPI extends Controller
         //Generate recommendation
         $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
-        
+        //Store the recommendation in responses_products
+        SurveyAPI::storeResults($recs, $rid);
 
         return response()->json(["message" => "response successfully stored", "products" => $recs], 200);
     }
