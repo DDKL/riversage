@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Users;
 
 class UsersAPI extends Controller
 {
     public function getUsers()
     {
-        $r = DB::table('users')->select('id','email')->get();
+        $r = Users::select('id','email')->get();
 
         return response()->json($r, 200);
     }
@@ -47,15 +48,29 @@ class UsersAPI extends Controller
 
     public function editUser(Request $req, $uid)
     {
-        if (DB::table('users')->where('uid', $uid)->exists())
+        if (Users::where('uid', $uid)->exists())
         {
-            $user = DB::table('users')->where('uid', $uid)->first();
+            $user = Users::where('uid', $uid)->first();
             $first_name = is_null($req["firstname"]) ? $user->first_name : $req["firstname"];
             $last_name = is_null($req["lastname"]) ? $user->last_name : $req["lastname"];
             $email = is_null($req["email"]) ? $user->email : $req["email"];
             $birthday = is_null($req["birthday"]) ? $user->birthday : $req["birthday"];
 
-            DB::table('users')->where('uid', $uid)->update(["first_name"=>$first_name, "last_name"=>$last_name, "email"=>$email, "birthday"=>$birthday]);
+            Users::where('uid', $uid)->update(["first_name"=>$first_name, "last_name"=>$last_name, "email"=>$email, "birthday"=>$birthday]);
+        }
+        else
+        {
+            return response()->json(["message" => "user not found"], 404);
+        }
+    }
+
+    public function deleteUser($uid)
+    {        
+        if (Users::where('uid', $uid)->exists())
+        {
+            Users::where('uid', $uid)->delete();
+
+            return response()->json(["message" => "user successfully deleted with id: " . $uid]);
         }
         else
         {

@@ -31,3 +31,4 @@ Route::get('users/{uid}','UsersAPI@getUser');
 Route::get('usersid/{uid}','UsersAPI@getUsersId');
 Route::post('users','UsersAPI@addUser');
 Route::put('users/{uid}','UsersAPI@editUser');
+Route::delete('users/{uid}','UsersAPI@deleteUser');
