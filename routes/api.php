@@ -38,3 +38,4 @@ Route::delete('users/{uid}','UsersAPI@deleteUser');
 
 // category
 Route::get('categories', 'CategoriesAPI@getCategories');
+Route::get('categories/{cid}', 'CategoriesAPI@getSubCategories');

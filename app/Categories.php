@@ -8,3 +8,4 @@ class Categories extends Model
 {
     protected $table = 'categories';
 }
+

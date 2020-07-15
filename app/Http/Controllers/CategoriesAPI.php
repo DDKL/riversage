@@ -17,4 +17,17 @@ class CategoriesAPI extends Controller
 
         return response()->json($result);
     }
+
+    public function getSubCategories($cid)
+    {
+        if (DB::table('subcategories')->where('categories_id', $cid)->exists())
+            {
+                $result = DB::table('subcategories')->where('categories_id', $cid)->get();
+                return response()->json($result);
+            }
+            else
+            {
+                return response()->json(["message" => "subcategories not found"], 404);
+            }
+    }
 }
