@@ -37,7 +37,7 @@ class SurveyAPI extends Controller
         return $users_id;
 
     }
-/*
+//*
     private function recommendationAlgorithm($sid, $responses)
     {
         //3 levels
@@ -78,7 +78,7 @@ class SurveyAPI extends Controller
 
         return $json;
     }
-*/
+//*/
     private function storeResults($recs, $rid)
     {
         $products = $recs->input('pid');
@@ -107,6 +107,11 @@ class SurveyAPI extends Controller
             $users_id = SurveyAPI::createUser($uid, $info[0]);
         }
         $responses = $req->input('responses');
+
+        $rid = SurveyAPI::createResponse($uid, $surveys_id);
+
+        for ($i = 0; $i < 12; $i++)
+        
         
 
         $rid = SurveyAPI::createResponse($uid, $surveys_id);
