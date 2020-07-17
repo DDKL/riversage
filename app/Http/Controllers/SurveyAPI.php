@@ -81,7 +81,7 @@ class SurveyAPI extends Controller
 //*/
     private function storeResults($recs, $rid)
     {
-        $products = $recs->input('pid');
+        $pid = $recs->input('pid');
         foreach($p as $pid)
         {
             DB::table('responses_products')->insert(['responses_id' => $rid, 'products_id' => $p]);
@@ -124,10 +124,10 @@ class SurveyAPI extends Controller
         }
 
         //Generate recommendation
-        // $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
+        $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
         //Store the recommendation in responses_products
-        SurveyAPI::storeResults($recs, $rid);
+        //SurveyAPI::storeResults($recs, $rid);
 
         return response()->json(["message" => "response successfully stored", "products" => $recs], 200);
     }
