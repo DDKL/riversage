@@ -103,6 +103,7 @@ class SurveyAPI extends Controller
             $users_id = SurveyAPI::createUser($uid, $info[0]);
         }
         $responses = $req->input('responses');
+        
 
         $rid = SurveyAPI::createResponse($uid, $surveys_id);
 
@@ -114,7 +115,7 @@ class SurveyAPI extends Controller
         }
 
         //Generate recommendation
-        $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
+        // $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
         //Store the recommendation in responses_products
         SurveyAPI::storeResults($recs, $rid);
