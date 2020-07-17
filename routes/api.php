@@ -18,17 +18,24 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// survey
 Route::get('survey','SurveyAPI@getSurveys');
 //Route::get('survey/{cat}','SurveyAPI@getSurvey');
 Route::get('survey/{sid}','SurveyAPI@getSurvey');
 Route::post('survey/{sid}','SurveyAPI@postSurvey');
 
+// result
 Route::get('result/{uid}','ResultAPI@getAllResults');
 Route::get('result/{uid}/{rid}','ResultAPI@getResult');
 
+// user
 Route::get('users','UsersAPI@getUsers');
 Route::get('users/{uid}','UsersAPI@getUser');
 Route::get('usersid/{uid}','UsersAPI@getUsersId');
 Route::post('users','UsersAPI@addUser');
 Route::put('users/{uid}','UsersAPI@editUser');
 Route::delete('users/{uid}','UsersAPI@deleteUser');
+
+// category
+Route::get('categories', 'CategoriesAPI@getCategories');
+Route::get('categories/{cid}', 'CategoriesAPI@getSubCategories');
