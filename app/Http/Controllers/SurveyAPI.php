@@ -37,7 +37,7 @@ class SurveyAPI extends Controller
         return $users_id;
 
     }
-//*
+/*
     private function recommendationAlgorithm($sid, $responses)
     {
         //3 levels
@@ -124,12 +124,13 @@ class SurveyAPI extends Controller
         }
 
         //Generate recommendation
-        $recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
+        //$recs = SurveyAPI::recommendationAlgorithm($sid, $responses);
 
         //Store the recommendation in responses_products
         //SurveyAPI::storeResults($recs, $rid);
 
-        return response()->json(["message" => "response successfully stored", "products" => $recs], 200);
+        //return response()->json(["message" => "response successfully stored", "products" => $recs], 200);
+        return response()->json(["message" => "response successfully stored"], 200);
     }
 
     public function getSurveys()
