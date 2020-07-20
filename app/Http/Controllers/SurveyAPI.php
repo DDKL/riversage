@@ -110,11 +110,11 @@ class SurveyAPI extends Controller
 
         $rid = SurveyAPI::createResponse($uid, $surveys_id);
 
-        for ($i = 0; $i < 12; $i++)
+        //for ($i = 0; $i < 12; $i++)
         
         
 
-        $rid = SurveyAPI::createResponse($uid, $surveys_id);
+        //$rid = SurveyAPI::createResponse($uid, $surveys_id);
 
         for ($i = 0; $i < 12; $i++)
         {
