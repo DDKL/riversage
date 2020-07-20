@@ -61,7 +61,9 @@ class SurveyAPI extends Controller
         $responses = $req->input('responses');
         $rid = SurveyAPI::createResponse($uid, $surveys_id);
 
-        for ($i = 0; $i < 12; $i++)
+
+
+        for ($i = 0; $i < count($responses); $i++)
         {
             ResponsesWellmatrix::insert(
                 ['value' => $responses[$i]['value'], 'questions_id' => $responses[$i]['questions_id'], 'responses_id' => $rid]
