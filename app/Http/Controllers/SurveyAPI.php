@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Exceptions\Handler;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
