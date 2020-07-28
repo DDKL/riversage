@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+namespace App\Exceptions\Handler;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,11 +11,13 @@ use App\Questions;
 use App\Responses;
 use App\Users;
 use App\ResponsesWellmatrix;
+use Illuminate\Support\Facades\Log;
 
 class SurveyAPI extends Controller
 {
     private function createResponse($uid = 0, $surveys_id)
     {
+		Log::info('createResponse called, uid is: ' . $uid . 'and surveys_id is: ' . $surveys_id);
         $rid = Responses::insertGetId([
             'uid' => $uid, 'surveys_id' => $surveys_id
         ]);
@@ -24,6 +27,7 @@ class SurveyAPI extends Controller
 
     private function createUser($uid = 0, $req)
     {
+		Log::info('createUser called, {uid, req} is: {' . $uid . ', ' . '}');
         $fname = $req["firstname"];
         $lname = $req["lastname"];
         $bday = $req["birthday"];
@@ -40,6 +44,7 @@ class SurveyAPI extends Controller
 
     private function storeResults($recs, $rid)
     {
+		Log::info('storeResults called, rid is: ' . $rid . 'and recs is ' . $recs);
         $pid = $recs->input('pid');
         foreach($p as $pid)
         {
@@ -48,6 +53,7 @@ class SurveyAPI extends Controller
     }
     public function postSurvey(Request $req, $sid)
     {
+		Log::info('postSurvey called, sid is: ' . $sid);
         //Save responses
         $surveys_id = $req->input('surveys_id');
         $uid = $req->input('uid');
@@ -75,14 +81,16 @@ class SurveyAPI extends Controller
 
     public function getSurveys()
     {
-            $r = Survey::get();
+		Log::info('getSurveys called');
+		$r = Survey::get();
 
-            return response()->json($r);
+		return response()->json($r);
 
     }
 
     public function getSurvey($sid)
     {
+		Log::info('getSurvey called, sid is: ' . $sid);
         if (SurveysQuestions::where('surveys_id', $sid)->exists())
         {
             $r = Questions::join(

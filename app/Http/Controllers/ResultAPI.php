@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Responses;
 use App\ResponsesWellmatrix;
+use Illuminate\Support\Facades\Log;
 
 class ResultAPI extends Controller
 {
     public function getAllResults($uid)
     {
+		Log::info('getAllResults called, uid is: ' . $uid);
         $r = Responses::where('uid', $uid)->get();
 
         return response()->json($r, 200);
@@ -18,6 +20,7 @@ class ResultAPI extends Controller
 
     public function getResult($uid, $rid)
     {
+		Log::info('getResult called, uid is: ' . $uid . 'and rid is ' . $rid);
         $sid = Responses::where([['uid', $uid], ['responses_id', $rid]])->value('surveys_id');
         if ($sid == 1)
         {

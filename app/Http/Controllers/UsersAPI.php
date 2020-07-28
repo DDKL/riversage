@@ -5,27 +5,31 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Users;
+use Illuminate\Support\Facades\Log;
 
 class UsersAPI extends Controller
 {
     public function getUsers()
     {
+		Log::info('getUsers() called, now running query.');
         $r = Users::select('id','email')->get();
-
+		Log::info('query executed. result of $r: ' . $r);
         return response()->json($r, 200);
     }
 
     public function getUser($uid)
     {
+		Log::info('getUser called, uid is: ' . $uid);
         $r = DB::table('users')->where('uid', $uid)->get();
-
+		Log::info('query executed. result of $r: ' . $r);
         return response()->json($r, 200);
     }
 
     public function addUser(Request $req)
     {
+		Log::info('addUser called.');
         $uid = $req["uid"];
-
+		Log::info('requested uid is: ' . $uid);
         if (DB::table('users')->where('uid', $uid)->exists())
         {
             return response()->json(["message"=>"user with uid " . $uid . " exists."], 200);
@@ -37,17 +41,19 @@ class UsersAPI extends Controller
             $bday = $req["birthday"];
             $email = $req["email"];
             $sex = $req["sex"];
+			
+			Log::info('running query to insert new record to users table...');
 
             $users_id = DB::table('users')->insertGetId(
                 ['first_name' => $fname, 'last_name' => $lname, 'birthday' => $bday, 'email' => $email, 'sex' => $sex, 'uid' => $uid]
             );
-
             return response()->json(["message" => "user successfully created with id: " . $users_id]);
         }
     }
 
     public function editUser(Request $req, $uid)
     {
+		Log::info('editUser called, uid is: ' . $uid);
         if (Users::where('uid', $uid)->exists())
         {
             $user = Users::where('uid', $uid)->first();
@@ -66,6 +72,7 @@ class UsersAPI extends Controller
 
     public function deleteUser($uid)
     {        
+		Log::info('deleteUser called, uid is: ' . $uid);
         if (Users::where('uid', $uid)->exists())
         {
             Users::where('uid', $uid)->delete();
