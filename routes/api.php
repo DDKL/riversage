@@ -39,3 +39,9 @@ Route::delete('users/{uid}','UsersAPI@deleteUser');
 // category
 Route::get('categories', 'CategoriesAPI@getCategories');
 Route::get('categories/{cid}', 'CategoriesAPI@getSubCategories');
+
+// nutrients
+Route::get('nutrients', 'NutrientsAPI@getAllNutrients');
+Route::get('nutrients/{nid}', 'NutrientsAPI@getNutrient');
+Route::get('benefits/{nid}', 'NutrientsAPI@getBenefits');
+Route::get('risks/{nid}', 'NutrientsAPI@getRisks');
