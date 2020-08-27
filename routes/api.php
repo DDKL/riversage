@@ -27,6 +27,7 @@ Route::post('survey/{sid}','SurveyAPI@postSurvey');
 // result
 Route::get('result/{uid}','ResultAPI@getAllResults');
 Route::get('result/{uid}/{rid}','ResultAPI@getResult');
+Route::get('tally/{uid}','ResultAPI@getResultTally');
 
 // user
 Route::get('users','UsersAPI@getUsers');

@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class KBase extends Controller
 {
-    //
+    public function getData() {
+        
+    }
 }

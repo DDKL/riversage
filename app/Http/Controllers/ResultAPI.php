@@ -39,4 +39,22 @@ class ResultAPI extends Controller
             return response()->json($r);
         }
     }
+
+    public function getResultTally($uid)
+    {//select count(*) from responses where uid="zxS6yS4Smrej3lZkGN4aGGgAs7P2" and surveys_id=1;
+
+        $s1tally = Responses::where([['uid', $uid], ['surveys_id', 1]])->get()->count();
+        $s2tally = Responses::where([['uid', $uid], ['surveys_id', 2]])->get()->count();
+        $s3tally = Responses::where([['uid', $uid], ['surveys_id', 3]])->get()->count();
+        $s4tally = Responses::where([['uid', $uid], ['surveys_id', 4]])->get()->count();
+
+        $tally = [
+            ["surveys_id" => 1, "tally" => $s1tally],
+            ["surveys_id" => 2, "tally" => $s2tally],
+            ["surveys_id" => 3, "tally" => $s3tally],
+            ["surveys_id" => 4, "tally" => $s4tally]
+        ];
+
+        return response()->json($tally);
+    }
 }
