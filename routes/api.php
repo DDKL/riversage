@@ -46,3 +46,6 @@ Route::get('nutrients', 'NutrientsAPI@getAllNutrients');
 Route::get('nutrients/{nid}', 'NutrientsAPI@getNutrient');
 Route::get('benefits/{nid}', 'NutrientsAPI@getBenefits');
 Route::get('risks/{nid}', 'NutrientsAPI@getRisks');
+
+// products-kb
+Route::get('kb/products/{ix}', 'KBase@getFeaturedProducts');
