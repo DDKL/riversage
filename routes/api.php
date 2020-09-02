@@ -48,4 +48,4 @@ Route::get('benefits/{nid}', 'NutrientsAPI@getBenefits');
 Route::get('risks/{nid}', 'NutrientsAPI@getRisks');
 
 // products-kb
-Route::get('kb/products/{ix}', 'KBase@getFeaturedProducts');
+Route::get('kb/products/{ix}/{sx}', 'KBase@getFeaturedProducts');

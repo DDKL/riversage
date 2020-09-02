@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class KBase extends Controller
 {
-    public function getFeaturedProducts($ix) {
-        $r = DB::table('products')->where('group_name','=',$ix)->pluck('handle');
+    public function getFeaturedProducts($ix, $sx) {
+        $ixsx = $ix . '_' . $sx;
+        $r = DB::table('products')->where('group_name','=',$ixsx)->pluck('handle');
         return response()->json($r, 200);
     }
 }
