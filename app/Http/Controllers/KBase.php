@@ -12,25 +12,22 @@ class KBase extends Controller
         if ($ix == "i2")
         {
             $brands = DB::table('products')->select('brand')->where('group_name','=',$ixsx)->groupBy('brand')->get();
-            $handle = DB::table('products')->select('handle')->where('group_name','=',$ixsx)->get();
 
             $r = [];
 
-            $arr = json_decode($brands, true);
-            for ($i = 0; $i < count($arr); $i++)
+            $brandsArr = json_decode($brands, true);
+            for ($i = 0; $i < count($brandsArr); $i++)
             {
-                $brand = $arr[$i]["brand"];
-                $r[$i]['brand'] = $brand;
+                $brand = $brandsArr[$i]["brand"];
                 $brandHandle = DB::table('products')->select('handle')->where([['group_name','=',$ixsx],['brand','=',$brand]])->get();
 
-                $bArr = json_decode($brandHandle, true);
+                $bHandleArr = json_decode($brandHandle, true);
                 
-                for ($j = 0; $j < count($bArr); $j++)
+                for ($j = 0; $j < count($bHandleArr); $j++)
                 {
-                    $handle = $bArr[$j]['handle'];
-                    $r[$i]['brand'][$j]['handle'] = $handle;
+                    $handle = $bHandleArr[$j]['handle'];
+                    $r[$brand]['handle'][$j] = $handle;
                 }
-                //$r[$i]["handle"] = $brandHandle;
             }
         }
         else
