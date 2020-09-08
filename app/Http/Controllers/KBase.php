@@ -9,7 +9,11 @@ class KBase extends Controller
 {
     public function getFeaturedProducts($ix, $sx) {
         $ixsx = $ix . '_' . $sx;
-        if ($ix == "i2")
+        if ($ix == "i1")
+        {
+            $r = DB::table('products')->where('group_name','=',$ixsx)->pluck('handle');
+        }
+        else if ($ix == "i2")
         {
             $brands = DB::table('products')->select('brand')->where('group_name','=',$ixsx)->groupBy('brand')->get();
 
@@ -30,7 +34,7 @@ class KBase extends Controller
                 }
             }
         }
-        else
+        else if ($ix == "i3")
         {
             $r = DB::table('products')->where('group_name','=',$ixsx)->pluck('handle');
         }
