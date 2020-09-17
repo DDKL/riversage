@@ -109,8 +109,8 @@ ok
 
             $query = DB::table('products')->where('group_name', '=', 'i1_physical_wellness')->pluck('handle');
             $handleArr = json_decode($query, true);
-            $json['physical_wellness']['title'] = 'Environmental Wellness Bundle';
-            $json['physical_wellness']['description'] = 'This is the Environmental Wellness Bundle';
+            $json['physical_wellness']['title'] = 'Physical Wellness Bundle';
+            $json['physical_wellness']['description'] = 'This is the Physical Wellness Bundle';
             $json['physical_wellness']['price'] = 499;
             $json['physical_wellness']['discountedPrice'] = 399;
 
@@ -121,8 +121,8 @@ ok
 
             $query = DB::table('products')->where('group_name', '=', 'i1_emotional_wellness')->pluck('handle');
             $handleArr = json_decode($query, true);
-            $json['emotional_wellness']['title'] = 'Environmental Wellness Bundle';
-            $json['emotional_wellness']['description'] = 'This is the Environmental Wellness Bundle';
+            $json['emotional_wellness']['title'] = 'Emotional Wellness Bundle';
+            $json['emotional_wellness']['description'] = 'This is the Emotional Wellness Bundle';
             $json['emotional_wellness']['price'] = 499;
             $json['emotional_wellness']['discountedPrice'] = 399;
 
