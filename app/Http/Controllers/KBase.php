@@ -13,7 +13,7 @@ class KBase extends Controller
 
         if ($ix == "i1")
         {
-            $r = DB::table('products')->where('group_name','=',$ixsx)->pluck('handle');
+            $r = DB::table('products')->where([['group_name','=',$ixsx], ['status','=',1]])->pluck('handle');
         }
         else if ($ix == "i2")
         {
@@ -25,7 +25,7 @@ class KBase extends Controller
             for ($i = 0; $i < count($brandsArr); $i++)
             {
                 $brand = $brandsArr[$i]["brand"];
-                $brandHandle = DB::table('products')->select('handle')->where([['group_name','=',$ixsx],['brand','=',$brand]])->get();
+                $brandHandle = DB::table('products')->select('handle')->where([['group_name','=',$ixsx],['brand','=',$brand], ['status','=',1]])->get();
 
                 $bHandleArr = json_decode($brandHandle, true);
                 
@@ -38,7 +38,7 @@ class KBase extends Controller
         }
         else if ($ix == "i3")
         {
-            $r = DB::table('products')->where('group_name','=',$ixsx)->pluck('handle');
+            $r = DB::table('products')->where([['group_name','=',$ixsx], ['status','=',1]])->pluck('handle');
         }
         
         return response()->json($r, 200);
@@ -112,7 +112,7 @@ ok
             }
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_emotional_wellness'], ['status','=',1]])->pluck('handle');
-            $handleArr = json_decode($query, true);
+            $handleArr = json_decode($query, true); 
 
             for ($i = 0; $i < count($handleArr); $i++)
             {
