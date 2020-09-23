@@ -119,7 +119,7 @@ ok
                 $json['emotional_wellness']['products'][$i] = $handleArr[$i];
             }
         }
-        else if ($ix = "i2")
+        else if ($ix == "i2")
         {
             $json = [];
             
