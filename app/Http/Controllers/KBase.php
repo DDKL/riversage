@@ -121,7 +121,7 @@ ok
             $json['physical_wellness']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_emotional_wellness'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'emotional_wellness'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_emotional_wellness'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true); 
 
