@@ -368,7 +368,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -378,7 +378,7 @@ ok
             $json['immune']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -388,7 +388,7 @@ ok
             $json['immune']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_immune'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -399,7 +399,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -409,7 +409,7 @@ ok
             $json['cognition']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -419,7 +419,7 @@ ok
             $json['cognition']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cognition'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -430,7 +430,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -440,7 +440,7 @@ ok
             $json['musculoskeletal']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -450,7 +450,7 @@ ok
             $json['musculoskeletal']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_musculoskeletal'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -461,7 +461,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -471,7 +471,7 @@ ok
             $json['energy']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -481,7 +481,7 @@ ok
             $json['energy']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_energy'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -492,7 +492,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -502,7 +502,7 @@ ok
             $json['gastrointestinal']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -512,7 +512,7 @@ ok
             $json['gastrointestinal']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_gastrointestinal'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -523,7 +523,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -533,7 +533,7 @@ ok
             $json['hormone']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -543,7 +543,7 @@ ok
             $json['hormone']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_hormone'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -554,7 +554,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -564,7 +564,7 @@ ok
             $json['stress']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -574,7 +574,7 @@ ok
             $json['stress']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_stress'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -585,7 +585,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -595,7 +595,7 @@ ok
             $json['toxicity']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -605,7 +605,7 @@ ok
             $json['toxicity']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_toxicity'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -616,7 +616,7 @@ ok
 
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Designs for Health'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -626,7 +626,7 @@ ok
             $json['circulation']['Designs for Health']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Orthomolecular'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
@@ -636,7 +636,7 @@ ok
             $json['circulation']['Orthomolecular']['bundle'] = $bundle[0];
             
             $query = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('handle');
-            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_cardiometabolic'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i3_circulation'], ['brand','=','Metagenics'], ['status','=',1]])->pluck('bundle');
             $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             for ($i = 0; $i < count($handleArr); $i++)
