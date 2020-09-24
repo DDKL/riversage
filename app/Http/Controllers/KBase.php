@@ -636,4 +636,11 @@ ok
 
         return response()->json($json, 200);
     }
+
+    public function getBundlePack($bHandle)
+    {
+        $r = DB::table('products')->where('bundle','=',$bHandle)->pluck('handle');
+
+        return response()->json($r, 200);
+    }
 }
