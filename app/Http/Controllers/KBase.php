@@ -96,7 +96,7 @@ ok
             {
                 $json['nutritional_wellness']['products'][$i] = $handleArr[$i];
             }
-            $json['nutritional_wellness']['bundle'] = $bundle[0];
+            $json['nutritional_wellness']['bundle'] = $bundle;
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_environmental_wellness'], ['status','=',1]])->pluck('handle');
             $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_environmental_wellness'], ['status','=',1]])->pluck('bundle');
@@ -107,7 +107,7 @@ ok
             {
                 $json['environmental_wellness']['products'][$i] = $handleArr[$i];
             }
-            $json['environmental_wellness']['bundle'] = $bundle[0];
+            $json['environmental_wellness']['bundle'] = $bundle;
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_physical_wellness'], ['status','=',1]])->pluck('handle');
             $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_physical_wellness'], ['status','=',1]])->pluck('bundle');
@@ -118,7 +118,7 @@ ok
             {
                 $json['physical_wellness']['products'][$i] = $handleArr[$i];
             }
-            $json['physical_wellness']['bundle'] = $bundle[0];
+            $json['physical_wellness']['bundle'] = $bundle;
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_emotional_wellness'], ['status','=',1]])->pluck('handle');
             $queryBundle = DB::table('products')->where([['group_name', '=', 'emotional_wellness'], ['status','=',1]])->pluck('bundle');
@@ -129,7 +129,7 @@ ok
             {
                 $json['emotional_wellness']['products'][$i] = $handleArr[$i];
             }
-            $json['emotional_wellness']['bundle'] = $bundle[0];
+            $json['emotional_wellness']['bundle'] = $bundle;
         }
         else if ($ix == "i2")
         {
