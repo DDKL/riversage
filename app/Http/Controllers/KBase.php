@@ -84,6 +84,8 @@ ok
         if ($ix == "i1")
         {
             $query = DB::table('products')->where([['group_name', '=', 'i1_nutritional_wellness'], ['status','=',1]])->pluck('handle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_nutritional_wellness'], ['status','=',1]])->pluck('bundle');
+            $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
             // $json['nutritional_wellness']['title'] = 'Nutritional Wellness Bundle';
             // $json['nutritional_wellness']['description'] = 'This is the Nutritional Wellness Bundle';
@@ -94,30 +96,40 @@ ok
             {
                 $json['nutritional_wellness']['products'][$i] = $handleArr[$i];
             }
+            $json['nutritional_wellness']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_environmental_wellness'], ['status','=',1]])->pluck('handle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_environmental_wellness'], ['status','=',1]])->pluck('bundle');
+            $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
 
             for ($i = 0; $i < count($handleArr); $i++)
             {
                 $json['environmental_wellness']['products'][$i] = $handleArr[$i];
             }
+            $json['environmental_wellness']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_physical_wellness'], ['status','=',1]])->pluck('handle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'i1_physical_wellness'], ['status','=',1]])->pluck('bundle');
+            $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true);
 
             for ($i = 0; $i < count($handleArr); $i++)
             {
                 $json['physical_wellness']['products'][$i] = $handleArr[$i];
             }
+            $json['physical_wellness']['bundle'] = $bundle[0];
 
             $query = DB::table('products')->where([['group_name', '=', 'i1_emotional_wellness'], ['status','=',1]])->pluck('handle');
+            $queryBundle = DB::table('products')->where([['group_name', '=', 'emotional_wellness'], ['status','=',1]])->pluck('bundle');
+            $bundle = json_decode($queryBundle, true);
             $handleArr = json_decode($query, true); 
 
             for ($i = 0; $i < count($handleArr); $i++)
             {
                 $json['emotional_wellness']['products'][$i] = $handleArr[$i];
             }
+            $json['emotional_wellness']['bundle'] = $bundle[0];
         }
         else if ($ix == "i2")
         {
